@@ -1,6 +1,6 @@
 {
   site: {
-    name: 'josephgallegos landing page',
+    name: 'Joseph Gallegos',
     version: '1.0.0',
   },
   structure: {

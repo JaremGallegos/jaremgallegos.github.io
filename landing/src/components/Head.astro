@@ -1,6 +1,9 @@
 ---
 import Favicons from "./Favicons.astro";
 import { ClientRouter } from "astro:transitions";
+import Config from "../../config.json";
+
+const { site } = Config
 ---
 
 <head>
@@ -17,7 +20,7 @@ import { ClientRouter } from "astro:transitions";
 	<meta name="theme-color" content="#fbf9f8" media="(prefers-color-scheme: light)" />
 	<link rel="sitemap" href="/sitemap-index.xml" />
   <link rel="manifest" href="/site.webmanifest" />
-	<title>Joseph Gallegos</title>
+	<title>{ site.name }</title>
 	<Favicons />
 	<ClientRouter />
 	<slot />
