@@ -14,7 +14,7 @@ local raw_features = [
 
 {
   items: [
-    Feature(i + 1, raw_features[i]) for i in std.range(0, std.length(raw_features) - 1)
+    Comment(i + 1, raw_features[i]) for i in std.range(0, std.length(raw_features) - 1)
   ],
   total: std.length(raw_features),
 }
