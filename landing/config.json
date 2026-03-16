@@ -1,0 +1,138 @@
+{
+   "site": {
+      "name": "josephgallegos landing page",
+      "version": "1.0.0"
+   },
+   "structure": {
+      "aboutme": {
+         "items": [
+            {
+               "description": "Acceso total a la información.",
+               "icon": "eye",
+               "id": 1,
+               "isNew": false,
+               "title": "Transparencia"
+            },
+            {
+               "description": "Procesos validados.",
+               "icon": "shield",
+               "id": 2,
+               "isNew": false,
+               "title": "Confianza"
+            },
+            {
+               "description": "Optimización de servicios.",
+               "icon": "zap",
+               "id": 3,
+               "isNew": true,
+               "title": "Eficiencia"
+            }
+         ],
+         "total": 3
+      },
+      "comments": {
+         "items": [
+            {
+               "description": "Acceso total a la información.",
+               "icon": "eye",
+               "id": 1,
+               "isNew": false,
+               "title": "Transparencia"
+            },
+            {
+               "description": "Procesos validados.",
+               "icon": "shield",
+               "id": 2,
+               "isNew": false,
+               "title": "Confianza"
+            },
+            {
+               "description": "Optimización de servicios.",
+               "icon": "zap",
+               "id": 3,
+               "isNew": true,
+               "title": "Eficiencia"
+            }
+         ],
+         "total": 3
+      },
+      "experience": {
+         "items": [
+            {
+               "description": "Acceso total a la información.",
+               "icon": "eye",
+               "id": 1,
+               "isNew": false,
+               "title": "Transparencia"
+            },
+            {
+               "description": "Procesos validados.",
+               "icon": "shield",
+               "id": 2,
+               "isNew": false,
+               "title": "Confianza"
+            },
+            {
+               "description": "Optimización de servicios.",
+               "icon": "zap",
+               "id": 3,
+               "isNew": true,
+               "title": "Eficiencia"
+            }
+         ],
+         "total": 3
+      },
+      "projects": {
+         "items": [
+            {
+               "description": "Acceso total a la información.",
+               "icon": "eye",
+               "id": 1,
+               "isNew": false,
+               "title": "Transparencia"
+            },
+            {
+               "description": "Procesos validados.",
+               "icon": "shield",
+               "id": 2,
+               "isNew": false,
+               "title": "Confianza"
+            },
+            {
+               "description": "Optimización de servicios.",
+               "icon": "zap",
+               "id": 3,
+               "isNew": true,
+               "title": "Eficiencia"
+            }
+         ],
+         "total": 3
+      },
+      "skills": {
+         "items": [
+            {
+               "description": "Acceso total a la información.",
+               "icon": "eye",
+               "id": 1,
+               "isNew": false,
+               "title": "Transparencia"
+            },
+            {
+               "description": "Procesos validados.",
+               "icon": "shield",
+               "id": 2,
+               "isNew": false,
+               "title": "Confianza"
+            },
+            {
+               "description": "Optimización de servicios.",
+               "icon": "zap",
+               "id": 3,
+               "isNew": true,
+               "title": "Eficiencia"
+            }
+         ],
+         "total": 3
+      }
+   }
+}

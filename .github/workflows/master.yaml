@@ -25,6 +25,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Configure JSONNET
+        run: |
+          sudo apt update && sudo apt install -y jsonnet
+          jsonnet --version
+
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -58,6 +63,10 @@ jobs:
 
       - name: Install Dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        working-directory: ${{ env.BUILD_PATH_ASTRO }}
+
+      - name: Generate Data
+        run: ${{ steps.detect-package-manager.outputs.manager }} run data
         working-directory: ${{ env.BUILD_PATH_ASTRO }}
 
       - name: Build Astro
