@@ -56,27 +56,21 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Install Dependencies Astro
+      - name: Install Dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH_ASTRO }}
 
-      - name: Build Path with Astro
+      - name: Build Astro
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build \
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH_ASTRO }}
 
-
-      - name: Merge Static Files
-        run: |
-          mkdir -p public
-          cp -r ${{ env.BUILD_PATH_ASTRO }}/dist/* public/
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public/
+          path: "${{ env.BUILD_PATH_ASTRO }}/dist/"
 
   deploy:
     name: Deploying
