@@ -16,8 +16,6 @@ concurrency:
 
 env:
   BUILD_PATH_ASTRO: "./landing"
-  BUILD_PATH_MDBOOK: "./research"
-  MDBOOK_VERSION: 0.4.36
 
 jobs:
   build:
@@ -58,11 +56,6 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Install MdBook
-        run: |
-          curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
-          rustup update
-          cargo install --version ${{ env.MDBOOK_VERSION }} mdbook
 
       - name: Install Dependencies Astro
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
@@ -75,16 +68,11 @@ jobs:
             --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH_ASTRO }}
 
-      - name: Build MdBook
-        run: mdbook build
-        working-directory: ${{ env.BUILD_PATH_MDBOOK }}
 
       - name: Merge Static Files
         run: |
           mkdir -p public
-          mkdir -p public/research
           cp -r ${{ env.BUILD_PATH_ASTRO }}/dist/* public/
-          cp -r ${{ env.BUILD_PATH_MDBOOK }}/book/* public/research
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

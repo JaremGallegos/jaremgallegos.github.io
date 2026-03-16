@@ -2,75 +2,28 @@
   "name": "landing",
   "type": "module",
   "version": "0.0.1",
-  "private": true,
-  "resolutions": {
-    "vite": "latest"
+  "engines": {
+    "node": ">=22.12.0"
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "prettier": "prettier --write **/*.{ts,tsx,css,astro} --ignore-path .gitignore"
+    "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.6",
-    "@astrojs/markdown-remark": "^6.3.10",
-    "@astrojs/mdx": "^4.3.13",
-    "@astrojs/react": "^4.4.2",
-    "@astrojs/rss": "^4.0.15",
-    "@astrojs/sitemap": "^3.7.0",
-    "@expressive-code/plugin-collapsible-sections": "^0.41.7",
-    "@expressive-code/plugin-line-numbers": "^0.41.7",
-    "@iconify-json/devicon": "^1.2.59",
-    "@iconify-json/logos": "^1.2.10",
-    "@iconify-json/lucide": "^1.2.94",
-    "@iconify-json/simple-icons": "^1.2.71",
-    "@shikijs/rehype": "^3.23.0",
+    "@astrojs/react": "^5.0.0",
+    "@astrojs/svelte": "^8.0.0",
+    "@cloudscape-design/components": "^3.0.1234",
+    "@cloudscape-design/global-styles": "^1.0.51",
     "@tailwindcss/vite": "^4.2.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^5.17.1",
-    "astro-expressive-code": "^0.41.7",
-    "astro-icon": "^1.1.5",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.575.0",
-    "radix-ui": "^1.4.3",
+    "astro": "^6.0.4",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "rehype-expressive-code": "^0.41.7",
-    "rehype-external-links": "^3.0.0",
-    "rehype-katex": "^7.0.1",
-    "remark-emoji": "^5.0.2",
-    "remark-math": "^6.0.0",
-    "tailwind-merge": "^3.5.0",
+    "svelte": "^5.53.12",
     "tailwindcss": "^4.2.1",
-    "tslib": "^2.8.1",
     "typescript": "^5.9.3"
-  },
-  "devDependencies": {
-    "prettier": "^3.8.1",
-    "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-astro-organize-imports": "^0.4.11",
-    "prettier-plugin-tailwindcss": "^0.7.2",
-    "shiki": "^3.23.0"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "plugins": [
-      "prettier-plugin-astro",
-      "prettier-plugin-tailwindcss",
-      "prettier-plugin-astro-organize-imports"
-    ],
-    "overrides": [
-      {
-        "files": "*.astro",
-        "options": {
-          "parser": "astro"
-        }
-      }
-    ]
   }
 }
